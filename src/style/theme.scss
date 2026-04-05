@@ -15,15 +15,173 @@ $gap-medium: 16px;
 $gap-large: 20px;
 $gap-xlarge: 40px;
 
-$color-black-coal-light: rgba(0, 0, 0, 0.4);
-$color-black-coal: rgba(0, 0, 0, 0.8);
 $color-blue-link: rgb(57, 112, 215);
 $color-blue: rgb(57, 112, 215);
-$color-gray-light: rgba(0, 0, 0, 0.05);
 $color-green-dark: rgb(52, 129, 55);
 $color-green: rgb(126, 196, 136);
 $color-red: rgb(198, 58, 58);
 $color-red-light: rgb(255, 233, 233);
+
+// ============================================
+// Light/Dark Mode CSS Custom Properties
+// ============================================
+
+// Light theme colors
+$light-bg-primary: #ffffff;
+$light-bg-secondary: #f5f5f5;
+$light-text-primary: rgba(0, 0, 0, 0.8);
+$light-text-secondary: rgba(0, 0, 0, 0.4);
+$light-border-color: rgba(0, 0, 0, 0.1);
+$light-hover-bg: rgba(0, 0, 0, 0.05);
+$light-shadow: rgba(0, 0, 0, 0.05);
+$light-item-done-bg: #c9ecd8;
+$light-item-done-border: #008000;
+
+// Dark theme colors
+$dark-bg-primary: #1c1c1c;
+$dark-bg-secondary: #242424;
+$dark-text-primary: rgba(255, 255, 255, 0.72);
+$dark-text-secondary: rgba(255, 255, 255, 0.38);
+$dark-border-color: rgba(255, 255, 255, 0.08);
+$dark-hover-bg: rgba(255, 255, 255, 0.06);
+$dark-shadow: rgba(0, 0, 0, 0.4);
+$dark-item-done-bg: #1d3326;
+$dark-item-done-border: #5a9e60;
+
+// CSS Custom Properties for runtime theming
+:root {
+  // Fallback for browsers that don't support light-dark()
+  --bg-primary: #{$light-bg-primary};
+  --bg-secondary: #{$light-bg-secondary};
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --border-color: #{$light-border-color};
+  --hover-bg: #{$light-hover-bg};
+  --shadow-color: #{$light-shadow};
+  --item-done-bg: #{$light-item-done-bg};
+  --item-done-border: #{$light-item-done-border};
+  --link-color: #{$color-blue-link};
+  --icon-invert: 0;
+  --entity-npc-border: #{$color-green};
+  --entity-boss-border: #{$color-red};
+  --entity-event-border: #{$color-blue};
+  --done-count-color: #{$color-green-dark};
+  --text-heading: #000000;
+  --reset-hover-bg: #{$color-red-light};
+  --reset-hover-color: #{$color-red};
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --cover-brightness: 1;
+
+  // Modern browsers with light-dark() support
+  color-scheme: light dark;
+}
+
+// light-dark() function support (modern browsers)
+@supports (color: light-dark(white, black)) {
+  :root {
+    --bg-primary: light-dark(#{$light-bg-primary}, #{$dark-bg-primary});
+    --bg-secondary: light-dark(#{$light-bg-secondary}, #{$dark-bg-secondary});
+    --text-primary: light-dark(#{$light-text-primary}, #{$dark-text-primary});
+    --text-secondary: light-dark(#{$light-text-secondary}, #{$dark-text-secondary});
+    --border-color: light-dark(#{$light-border-color}, #{$dark-border-color});
+    --hover-bg: light-dark(#{$light-hover-bg}, #{$dark-hover-bg});
+    --shadow-color: light-dark(#{$light-shadow}, #{$dark-shadow});
+    --item-done-bg: light-dark(#{$light-item-done-bg}, #{$dark-item-done-bg});
+    --item-done-border: light-dark(#{$light-item-done-border}, #{$dark-item-done-border});
+    --link-color: light-dark(#{$color-blue-link}, #6a9fd8);
+    --entity-npc-border: light-dark(#{$color-green}, #5a9e6a);
+    --entity-boss-border: light-dark(#{$color-red}, #b05555);
+    --entity-event-border: light-dark(#{$color-blue}, #5a82b8);
+    --done-count-color: light-dark(#{$color-green-dark}, #5a9e60);
+    --text-heading: light-dark(#000000, #ffffff);
+    --reset-hover-bg: light-dark(#{$color-red-light}, #3d2020);
+    --reset-hover-color: light-dark(#{$color-red}, #d47272);
+    --overlay-bg: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  }
+}
+
+// Fallback for browsers without light-dark() support - use media query
+@supports not (color: light-dark(white, black)) {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #{$dark-bg-primary};
+      --bg-secondary: #{$dark-bg-secondary};
+      --text-primary: #{$dark-text-primary};
+      --text-secondary: #{$dark-text-secondary};
+      --border-color: #{$dark-border-color};
+      --hover-bg: #{$dark-hover-bg};
+      --shadow-color: #{$dark-shadow};
+      --item-done-bg: #{$dark-item-done-bg};
+      --item-done-border: #{$dark-item-done-border};
+      --link-color: #6a9fd8;
+      --entity-npc-border: #5a9e6a;
+      --entity-boss-border: #b05555;
+      --entity-event-border: #5a82b8;
+      --done-count-color: #5a9e60;
+      --text-heading: #ffffff;
+      --reset-hover-bg: #3d2020;
+      --reset-hover-color: #d47272;
+      --overlay-bg: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+// Numeric variables (not colors) can't use light-dark(). Use a media query instead.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --icon-invert: 0.85;
+    --cover-brightness: 0.7;
+  }
+}
+
+// Manual theme overrides (takes priority over system preference)
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #{$light-bg-primary};
+  --bg-secondary: #{$light-bg-secondary};
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --border-color: #{$light-border-color};
+  --hover-bg: #{$light-hover-bg};
+  --shadow-color: #{$light-shadow};
+  --item-done-bg: #{$light-item-done-bg};
+  --item-done-border: #{$light-item-done-border};
+  --link-color: #{$color-blue-link};
+  --icon-invert: 0;
+  --entity-npc-border: #{$color-green};
+  --entity-boss-border: #{$color-red};
+  --entity-event-border: #{$color-blue};
+  --done-count-color: #{$color-green-dark};
+  --text-heading: #000000;
+  --reset-hover-bg: #{$color-red-light};
+  --reset-hover-color: #{$color-red};
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --cover-brightness: 1;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-primary: #{$dark-bg-primary};
+  --bg-secondary: #{$dark-bg-secondary};
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --border-color: #{$dark-border-color};
+  --hover-bg: #{$dark-hover-bg};
+  --shadow-color: #{$dark-shadow};
+  --item-done-bg: #{$dark-item-done-bg};
+  --item-done-border: #{$dark-item-done-border};
+  --link-color: #6a9fd8;
+  --icon-invert: 0.85;
+  --entity-npc-border: #5a9e6a;
+  --entity-boss-border: #b05555;
+  --entity-event-border: #5a82b8;
+  --done-count-color: #5a9e60;
+  --text-heading: #ffffff;
+  --reset-hover-bg: #3d2020;
+  --reset-hover-color: #d47272;
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --cover-brightness: 0.7;
+}
 
 @mixin desktop {
   @media only screen and (min-width: 600px) {
@@ -32,7 +190,7 @@ $color-red-light: rgb(255, 233, 233);
 }
 
 @mixin link-block {
-  color: $color-black-coal;
+  color: var(--text-primary);
   padding: $gap-small $gap-large;
   display: flex;
   align-items: center;
@@ -40,7 +198,7 @@ $color-red-light: rgb(255, 233, 233);
   cursor: pointer;
 
   &:hover {
-    background-color: $color-gray-light;
+    background-color: var(--hover-bg);
     text-decoration: none;
   }
 }

@@ -43,11 +43,17 @@ const Item = ({ item, collectionId }: ItemProps): JSX.Element => {
 
   return (
     <div className={`item ${isChecked ? 'done' : ''}`}>
-      <div className="frame" onClick={handleItemClick}>
-        <img src={`image/${folder[collectionId]}/${slug}.png`} />
-      </div>
+      <button 
+        className="frame" 
+        onClick={handleItemClick}
+        type="button"
+        aria-pressed={isChecked}
+        aria-label={`${item.name} - ${isChecked ? 'collected' : 'not collected'}`}
+      >
+        <img src={`image/${folder[collectionId]}/${slug}.png`} alt="" />
+      </button>
       <div className="item-text">
-        <a href={`https://terraria.wiki.gg/wiki/${slug}`} target="_blank">
+        <a href={`https://terraria.wiki.gg/wiki/${slug}`} target="_blank" rel="noopener noreferrer">
           {item.name}
         </a>
       </div>

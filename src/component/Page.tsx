@@ -12,10 +12,13 @@ interface PageProps {
 }
 
 const Page = ({ page }: PageProps): JSX.Element => {
-  if (page?.type === 'chapter') return <ChapterPage page={page.content as Chapter} />
-  if (page?.type === 'collection') return <CollectionPage page={page.content as Collection} />
-
-  return <HomePage />
+  return (
+    <main id="main-content" tabIndex={-1}>
+      {page?.type === 'chapter' && <ChapterPage page={page.content as Chapter} />}
+      {page?.type === 'collection' && <CollectionPage page={page.content as Collection} />}
+      {!page && <HomePage />}
+    </main>
+  )
 }
 
 export default Page

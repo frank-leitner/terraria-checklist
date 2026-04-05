@@ -49,7 +49,7 @@ const Section = ({ data }: SectionProps): JSX.Element => {
     <>
       <section>
         <h3>Chapters</h3>
-        <div>
+        <ul>
           {chapters.map((chapter) => {
             const doneItemsCount = getDoneItemsCount('chapter', chapter.id)
             const itemsCount = chapter.items.filter((item) => typeof item === 'object').length
@@ -63,25 +63,26 @@ const Section = ({ data }: SectionProps): JSX.Element => {
               bounce && checkedItem?.pageType === 'chapter' && checkedItem?.pageId === chapter.id
 
             return (
-              <a
-                key={chapter.id}
-                href={`#${chapter.slug}`}
-                onClick={() => handleElementClick('chapter', chapter)}
-                className={linkClasses.join(' ')}
-              >
-                {chapter.label}
-                <span className={`done-count ${doBounce ? 'bounce' : ''}`}>
-                  ({doneItemsCount}/{itemsCount})
-                </span>
-              </a>
+              <li key={chapter.id}>
+                <a
+                  href={`#${chapter.slug}`}
+                  onClick={() => handleElementClick('chapter', chapter)}
+                  className={linkClasses.join(' ')}
+                >
+                  {chapter.label}
+                  <span className={`done-count ${doBounce ? 'bounce' : ''}`}>
+                    ({doneItemsCount}/{itemsCount})
+                  </span>
+                </a>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </section>
 
       <section>
         <h3>Collection</h3>
-        <div>
+        <ul>
           {collections.map((collection) => {
             const doneItemsCount = getDoneItemsCount('collection', collection.id)
             const itemsCount = collection.items.filter((item) => typeof item === 'object').length
@@ -100,20 +101,21 @@ const Section = ({ data }: SectionProps): JSX.Element => {
               checkedItem?.pageId === collection.id
 
             return (
-              <a
-                key={collection.id}
-                href={`#${collection.slug}`}
-                onClick={() => handleElementClick('collection', collection)}
-                className={linkClasses.join(' ')}
-              >
-                {collection.label}
-                <span className={`done-count ${doBounce ? 'bounce' : ''}`}>
-                  ({doneItemsCount}/{itemsCount})
-                </span>
-              </a>
+              <li key={collection.id}>
+                <a
+                  href={`#${collection.slug}`}
+                  onClick={() => handleElementClick('collection', collection)}
+                  className={linkClasses.join(' ')}
+                >
+                  {collection.label}
+                  <span className={`done-count ${doBounce ? 'bounce' : ''}`}>
+                    ({doneItemsCount}/{itemsCount})
+                  </span>
+                </a>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </section>
     </>
   )

@@ -1,7 +1,7 @@
 .line {
   @mixin done-item {
     text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--text-secondary);
     border: 0;
   }
   @mixin checked-transition {
@@ -49,6 +49,7 @@
   input[type='checkbox'] {
     min-height: 26px;
     min-width: 26px;
+    accent-color: var(--item-done-border);
   }
 
   .entity {
@@ -57,27 +58,27 @@
     font-size: 0;
 
     &.npc a {
-      border-bottom: 2px solid $color-green;
+      border-bottom: 2px solid var(--entity-npc-border);
     }
 
     &.boss a {
-      border-bottom: 2px solid $color-red;
+      border-bottom: 2px solid var(--entity-boss-border);
     }
 
     &.event a {
-      border-bottom: 2px solid $color-blue;
+      border-bottom: 2px solid var(--entity-event-border);
     }
 
     a {
       margin-left: 2px;
-      color: $color-blue-link;
+      color: var(--link-color);
       font-size: 16px;
       padding-bottom: 3px;
       text-decoration: none;
 
       &:hover {
-        color: $color-black-coal;
-        border-color: $color-black-coal;
+        color: var(--text-primary);
+        border-color: var(--text-primary);
         text-decoration: none;
       }
     }

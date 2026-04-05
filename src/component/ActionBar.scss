@@ -3,16 +3,19 @@
   width: 100%;
   height: $action-bar-height;
   padding: $gap-tiny;
-  background-color: white;
+  background-color: var(--bg-primary);
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
 
   .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: $big-text-font-family;
     text-transform: uppercase;
     font-size: 14px;
@@ -30,15 +33,11 @@
     height: 32px;
     width: 32px;
     opacity: 0.7;
+    filter: invert(var(--icon-invert));
 
     &.drawer-toggle {
       background: url('/src/image/icon/menu.svg') no-repeat center center;
     }
-    &.dark-mode-toggle {
-      background: url('/src/image/icon/dark-mode.svg') no-repeat center center;
-      visibility: hidden;
-    }
-
     img {
       opacity: 0.5;
     }
