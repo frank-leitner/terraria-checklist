@@ -148,11 +148,8 @@ const Drawer = (): JSX.Element => {
           <SupportButton />
         </a>
 
-        <div className="diminished">Ready for Terraria 1.4.5 and above</div>
-        <div className="diminished">
-          Updated on {LAST_BUILD_DATE} (
-          <a href="https://ewauq.github.io/terraria-checklist/v1">change version</a>)
-        </div>
+        <div className="diminished">Ready for Terraria 1.4.5 and above.</div>
+        <div className="diminished">Updated on {LAST_BUILD_DATE}.</div>
         <br />
         <div className="diminished">
           Code by{' '}
@@ -166,9 +163,14 @@ const Drawer = (): JSX.Element => {
           &{' '}
           <a href="https://github.com/Clonephaze" target="_blank" rel="noopener noreferrer">
             Clonephaze
-          </a>{' '}
+          </a>
+          .
           <br />
-          Artwork by{' '}
+          Assets by{' '}
+          <a href="https://re-logic.com/" target="_blank" rel="noopener noreferrer">
+            Re-Logic
+          </a>{' '}
+          · Artwork by{' '}
           <a
             href="https://www.deviantart.com/vsewolod/art/Terraria-World-730563825"
             target="_blank"
@@ -176,6 +178,7 @@ const Drawer = (): JSX.Element => {
           >
             Vsewolod
           </a>
+          .
         </div>
       </nav>
     </>
