@@ -47,17 +47,6 @@
     @include opened;
   }
 
-  @mixin ornament($icon) {
-    vertical-align: top;
-    opacity: 0.7;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    content: ' ';
-    background: url('../image/icon/#{$icon}.svg') no-repeat center center;
-    filter: invert(var(--icon-invert));
-  }
-
   &.open {
     @include opened;
   }
@@ -69,9 +58,15 @@
     margin-bottom: 20px;
     gap: $gap-small;
     margin: $gap-large;
+    color: var(--text-primary);
+    text-decoration: none;
 
     @include desktop {
       display: flex;
+    }
+
+    &:hover {
+      text-decoration: none;
     }
 
     .logo-text {
@@ -103,39 +98,24 @@
     }
   }
 
-  .danger-zone {
-    margin: $gap-large 0 $gap-large 0;
+  .actions {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin: $gap-large 0;
+    padding: $gap-small 0;
 
-    @mixin strip {
-      content: ' ';
-      height: 6px;
-      display: block;
-      background-image: url('../image/icon/strips.png');
-      filter: invert(var(--icon-invert));
-    }
-
-    &::before,
-    &::after {
-      @include strip;
-    }
-
-    button.reset {
+    button {
       @include link-block;
       width: 100%;
-      margin: $gap-small 0;
       background: none;
       border: none;
       font: inherit;
       cursor: pointer;
       text-align: left;
 
-      &::before {
-        @include ornament('reset');
-      }
-
-      &:hover {
-        background-color: var(--reset-hover-bg);
-        color: var(--reset-hover-color);
+      .action-icon {
+        width: 24px;
+        text-align: center;
       }
 
       &:focus-visible {
@@ -143,12 +123,14 @@
         outline-offset: 2px;
       }
     }
-  }
 
-  a.home {
-    margin-top: $gap-large;
-    &::before {
-      @include ornament('home');
+    button.theme-toggle:hover {
+      background-color: var(--hover-bg);
+    }
+
+    button.reset:hover {
+      background-color: var(--reset-hover-bg);
+      color: var(--reset-hover-color);
     }
   }
 
@@ -157,43 +139,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  button.theme-toggle {
-    @include link-block;
-    width: calc(100% - #{$gap-large * 2});
-    justify-content: space-between;
-    margin: 0 $gap-large $gap-large $gap-large;
-    padding: $gap-small $gap-medium;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background: none;
-    font: inherit;
-    cursor: pointer;
-
-    .theme-label {
-      opacity: 0.7;
-    }
-
-    .theme-value {
-      background-color: var(--hover-bg);
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: $small-font-size;
-    }
-
-    &:hover {
-      background-color: var(--hover-bg);
-      
-      .theme-value {
-        background-color: var(--border-color);
-      }
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--link-color);
-      outline-offset: 2px;
-    }
   }
 
   .diminished {

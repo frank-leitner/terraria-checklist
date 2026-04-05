@@ -70,16 +70,16 @@ const Drawer = (): JSX.Element => {
     })
   }
 
-  const getThemeLabel = (): string => {
-    if (theme === 'system') return 'Auto'
-    if (theme === 'light') return 'Light'
-    return 'Dark'
+  const getNextThemeLabel = (): string => {
+    if (theme === 'system') return 'Switch to light theme'
+    if (theme === 'light') return 'Switch to dark theme'
+    return 'Switch to auto theme'
   }
 
-  const getThemeIcon = (): string => {
-    if (theme === 'system') return '⚙️'
-    if (theme === 'light') return '☀️'
-    return '🌙'
+  const getNextThemeIcon = (): string => {
+    if (theme === 'system') return '☀️'
+    if (theme === 'light') return '🌙'
+    return '⚙️'
   }
 
   if (!data) return <></>
@@ -104,40 +104,26 @@ const Drawer = (): JSX.Element => {
       <SkipToContent />
       <div className={`overlay ${openDrawer ? 'show' : ''}`} onClick={handleOverlayClick}></div>
       <nav className={`drawer ${openDrawer ? 'open' : ''}`} aria-label="Main navigation">
-        <div className="logo">
+        <a href="index.html" className="logo">
           <img src="image/logo/tree.png" alt="" />
           <div className="logo-text">
             <span>Progression</span>
             <span>Checklist</span>
           </div>
-        </div>
+        </a>
         <div className="sections">
-          <ul>
-            <li>
-              <a href="index.html" className="home">
-                Home
-              </a>
-            </li>
-          </ul>
           <Sections data={data} />
         </div>
-        <div className="danger-zone">
+        <div className="actions">
+          <button className="theme-toggle" onClick={cycleTheme} type="button">
+            <span className="action-icon" aria-hidden="true">{getNextThemeIcon()}</span>
+            {getNextThemeLabel()}
+          </button>
           <button className="reset" onClick={handleResetClick} type="button">
+            <span className="action-icon" aria-hidden="true">🗑️</span>
             Reset progression
           </button>
         </div>
-
-        <button
-          className="theme-toggle"
-          onClick={cycleTheme}
-          type="button"
-          aria-label={`Theme: ${getThemeLabel()}. Click to change.`}
-        >
-          <span className="theme-label">Theme</span>
-          <span className="theme-value" aria-hidden="true">
-            {getThemeIcon()} {getThemeLabel()}
-          </span>
-        </button>
 
         <a
           className="support-link"
