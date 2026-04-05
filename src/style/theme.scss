@@ -15,11 +15,8 @@ $gap-medium: 16px;
 $gap-large: 20px;
 $gap-xlarge: 40px;
 
-$color-black-coal-light: rgba(0, 0, 0, 0.4);
-$color-black-coal: rgba(0, 0, 0, 0.8);
 $color-blue-link: rgb(57, 112, 215);
 $color-blue: rgb(57, 112, 215);
-$color-gray-light: rgba(0, 0, 0, 0.05);
 $color-green-dark: rgb(52, 129, 55);
 $color-green: rgb(126, 196, 136);
 $color-red: rgb(198, 58, 58);
@@ -69,6 +66,10 @@ $dark-item-done-border: #5a9e60;
   --entity-boss-border: #{$color-red};
   --entity-event-border: #{$color-blue};
   --done-count-color: #{$color-green-dark};
+  --text-heading: #000000;
+  --reset-hover-bg: #{$color-red-light};
+  --reset-hover-color: #{$color-red};
+  --overlay-bg: rgba(0, 0, 0, 0.4);
   --cover-brightness: 1;
 
   // Modern browsers with light-dark() support
@@ -92,6 +93,10 @@ $dark-item-done-border: #5a9e60;
     --entity-boss-border: light-dark(#{$color-red}, #b05555);
     --entity-event-border: light-dark(#{$color-blue}, #5a82b8);
     --done-count-color: light-dark(#{$color-green-dark}, #5a9e60);
+    --text-heading: light-dark(#000000, #ffffff);
+    --reset-hover-bg: light-dark(#{$color-red-light}, #3d2020);
+    --reset-hover-color: light-dark(#{$color-red}, #d47272);
+    --overlay-bg: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
   }
 }
 
@@ -113,6 +118,10 @@ $dark-item-done-border: #5a9e60;
       --entity-boss-border: #b05555;
       --entity-event-border: #5a82b8;
       --done-count-color: #5a9e60;
+      --text-heading: #ffffff;
+      --reset-hover-bg: #3d2020;
+      --reset-hover-color: #d47272;
+      --overlay-bg: rgba(0, 0, 0, 0.7);
     }
   }
 }
@@ -143,6 +152,10 @@ $dark-item-done-border: #5a9e60;
   --entity-boss-border: #{$color-red};
   --entity-event-border: #{$color-blue};
   --done-count-color: #{$color-green-dark};
+  --text-heading: #000000;
+  --reset-hover-bg: #{$color-red-light};
+  --reset-hover-color: #{$color-red};
+  --overlay-bg: rgba(0, 0, 0, 0.4);
   --cover-brightness: 1;
 }
 
@@ -163,6 +176,10 @@ $dark-item-done-border: #5a9e60;
   --entity-boss-border: #b05555;
   --entity-event-border: #5a82b8;
   --done-count-color: #5a9e60;
+  --text-heading: #ffffff;
+  --reset-hover-bg: #3d2020;
+  --reset-hover-color: #d47272;
+  --overlay-bg: rgba(0, 0, 0, 0.7);
   --cover-brightness: 0.7;
 }
 
