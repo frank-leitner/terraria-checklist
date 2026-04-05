@@ -52,7 +52,7 @@ const Item = ({ item, collectionId }: ItemProps): JSX.Element => {
         aria-pressed={isChecked}
         aria-label={`${item.name} - ${isChecked ? 'collected' : 'not collected'}`}
       >
-        <img src={`image/${folder[collectionId]}/${slug}.png`} alt="" />
+        <img src={`image/${folder[collectionId]}/${slug}.png`} alt="" loading="lazy" />
       </button>
       <div className="item-text">
         <a href={`https://terraria.wiki.gg/wiki/${slug}`} target="_blank" rel="noopener noreferrer">
