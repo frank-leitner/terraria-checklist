@@ -766,6 +766,10 @@
           "name": "Snow armor"
         },
         {
+          "id": 67,
+          "name": "Pink Snow armor"
+        },
+        {
           "id": 11,
           "name": "Angler armor"
         },
@@ -862,6 +866,14 @@
           "name": "Molten armor"
         },
         "🦄 Hardmode",
+        {
+          "id": 68,
+          "name": "Prospector armor"
+        },
+        {
+          "id": 69,
+          "name": "Captain armor"
+        },
         {
           "id": 35,
           "name": "Pearlwood armor"
