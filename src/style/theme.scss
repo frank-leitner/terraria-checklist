@@ -83,7 +83,6 @@ $dark-item-done-border: #4caf50;
     --item-done-bg: light-dark(#{$light-item-done-bg}, #{$dark-item-done-bg});
     --item-done-border: light-dark(#{$light-item-done-border}, #{$dark-item-done-border});
     --link-color: light-dark(#{$color-blue-link}, #7ab3ff);
-    --icon-invert: light-dark(0, 0.85);
   }
 }
 
@@ -101,8 +100,13 @@ $dark-item-done-border: #4caf50;
       --item-done-bg: #{$dark-item-done-bg};
       --item-done-border: #{$dark-item-done-border};
       --link-color: #7ab3ff;
-      --icon-invert: 0.85;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --icon-invert: 0.85;
   }
 }
 
