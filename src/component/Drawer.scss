@@ -55,6 +55,7 @@
     height: 24px;
     content: ' ';
     background: url('../image/icon/#{$icon}.svg') no-repeat center center;
+    filter: invert(var(--icon-invert));
   }
 
   &.open {
