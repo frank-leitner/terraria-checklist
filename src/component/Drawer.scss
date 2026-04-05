@@ -112,10 +112,11 @@
       font: inherit;
       cursor: pointer;
       text-align: left;
+      gap: $gap-small;
 
       .action-icon {
-        width: 24px;
-        text-align: center;
+        width: 16px;
+        height: 16px;
       }
 
       &:focus-visible {

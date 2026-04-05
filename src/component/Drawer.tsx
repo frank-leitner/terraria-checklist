@@ -77,9 +77,9 @@ const Drawer = (): JSX.Element => {
   }
 
   const getNextThemeIcon = (): string => {
-    if (theme === 'system') return '☀️'
-    if (theme === 'light') return '🌙'
-    return '⚙️'
+    if (theme === 'system') return 'image/icon/weather_sun.png'
+    if (theme === 'light') return 'image/icon/half_moon.png'
+    return 'image/icon/cog.png'
   }
 
   if (!data) return <></>
@@ -116,11 +116,11 @@ const Drawer = (): JSX.Element => {
         </div>
         <div className="actions">
           <button className="theme-toggle" onClick={cycleTheme} type="button">
-            <span className="action-icon" aria-hidden="true">{getNextThemeIcon()}</span>
+            <img className="action-icon" src={getNextThemeIcon()} alt="" aria-hidden="true" />
             {getNextThemeLabel()}
           </button>
           <button className="reset" onClick={handleResetClick} type="button">
-            <span className="action-icon" aria-hidden="true">🗑️</span>
+            <img className="action-icon" src="image/icon/arrow_refresh_small.png" alt="" aria-hidden="true" />
             Reset progression
           </button>
         </div>
