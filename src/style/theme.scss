@@ -41,15 +41,15 @@ $light-item-done-bg: #c9ecd8;
 $light-item-done-border: #008000;
 
 // Dark theme colors
-$dark-bg-primary: #1a1a2e;
-$dark-bg-secondary: #16213e;
-$dark-text-primary: rgba(255, 255, 255, 0.9);
-$dark-text-secondary: rgba(255, 255, 255, 0.5);
-$dark-border-color: rgba(255, 255, 255, 0.1);
-$dark-hover-bg: rgba(255, 255, 255, 0.08);
-$dark-shadow: rgba(0, 0, 0, 0.3);
-$dark-item-done-bg: #1e4d2b;
-$dark-item-done-border: #4caf50;
+$dark-bg-primary: #1c1c1c;
+$dark-bg-secondary: #242424;
+$dark-text-primary: rgba(255, 255, 255, 0.72);
+$dark-text-secondary: rgba(255, 255, 255, 0.38);
+$dark-border-color: rgba(255, 255, 255, 0.08);
+$dark-hover-bg: rgba(255, 255, 255, 0.06);
+$dark-shadow: rgba(0, 0, 0, 0.4);
+$dark-item-done-bg: #1d3326;
+$dark-item-done-border: #5a9e60;
 
 // CSS Custom Properties for runtime theming
 :root {
@@ -65,6 +65,11 @@ $dark-item-done-border: #4caf50;
   --item-done-border: #{$light-item-done-border};
   --link-color: #{$color-blue-link};
   --icon-invert: 0;
+  --entity-npc-border: #{$color-green};
+  --entity-boss-border: #{$color-red};
+  --entity-event-border: #{$color-blue};
+  --done-count-color: #{$color-green-dark};
+  --cover-brightness: 1;
 
   // Modern browsers with light-dark() support
   color-scheme: light dark;
@@ -82,7 +87,11 @@ $dark-item-done-border: #4caf50;
     --shadow-color: light-dark(#{$light-shadow}, #{$dark-shadow});
     --item-done-bg: light-dark(#{$light-item-done-bg}, #{$dark-item-done-bg});
     --item-done-border: light-dark(#{$light-item-done-border}, #{$dark-item-done-border});
-    --link-color: light-dark(#{$color-blue-link}, #7ab3ff);
+    --link-color: light-dark(#{$color-blue-link}, #6a9fd8);
+    --entity-npc-border: light-dark(#{$color-green}, #5a9e6a);
+    --entity-boss-border: light-dark(#{$color-red}, #b05555);
+    --entity-event-border: light-dark(#{$color-blue}, #5a82b8);
+    --done-count-color: light-dark(#{$color-green-dark}, #5a9e60);
   }
 }
 
@@ -99,14 +108,20 @@ $dark-item-done-border: #4caf50;
       --shadow-color: #{$dark-shadow};
       --item-done-bg: #{$dark-item-done-bg};
       --item-done-border: #{$dark-item-done-border};
-      --link-color: #7ab3ff;
+      --link-color: #6a9fd8;
+      --entity-npc-border: #5a9e6a;
+      --entity-boss-border: #b05555;
+      --entity-event-border: #5a82b8;
+      --done-count-color: #5a9e60;
     }
   }
 }
 
+// Numeric variables (not colors) can't use light-dark(). Use a media query instead.
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --icon-invert: 0.85;
+    --cover-brightness: 0.7;
   }
 }
 
@@ -124,6 +139,11 @@ $dark-item-done-border: #4caf50;
   --item-done-border: #{$light-item-done-border};
   --link-color: #{$color-blue-link};
   --icon-invert: 0;
+  --entity-npc-border: #{$color-green};
+  --entity-boss-border: #{$color-red};
+  --entity-event-border: #{$color-blue};
+  --done-count-color: #{$color-green-dark};
+  --cover-brightness: 1;
 }
 
 :root[data-theme="dark"] {
@@ -137,8 +157,13 @@ $dark-item-done-border: #4caf50;
   --shadow-color: #{$dark-shadow};
   --item-done-bg: #{$dark-item-done-bg};
   --item-done-border: #{$dark-item-done-border};
-  --link-color: #7ab3ff;
+  --link-color: #6a9fd8;
   --icon-invert: 0.85;
+  --entity-npc-border: #5a9e6a;
+  --entity-boss-border: #b05555;
+  --entity-event-border: #5a82b8;
+  --done-count-color: #5a9e60;
+  --cover-brightness: 0.7;
 }
 
 @mixin desktop {

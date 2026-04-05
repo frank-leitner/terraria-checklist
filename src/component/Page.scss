@@ -12,6 +12,7 @@
 
   .cover {
     padding: $gap-small;
+    filter: brightness(var(--cover-brightness));
 
     h1 {
       font-family: $big-text-font-family;

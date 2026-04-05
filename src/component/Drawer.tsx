@@ -3,6 +3,7 @@ import { useDatabase } from '../context/DatabaseContext'
 import { useDrawer } from '../context/DrawerContext'
 import './Drawer.scss'
 import Sections from './Sections'
+import SupportButton from './SupportButton'
 
 // @ts-ignore
 const LAST_BUILD_DATE = __BUILD_DATE__
@@ -144,7 +145,7 @@ const Drawer = (): JSX.Element => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="image/icon/bmc-full-logo.svg" alt="Buy me a coffee!" />
+          <SupportButton />
         </a>
 
         <div className="diminished">Ready for Terraria 1.4.5 and above</div>

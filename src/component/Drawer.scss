@@ -96,6 +96,7 @@
     margin: $gap-large;
     width: 70%;
     margin: $gap-large auto;
+    color: var(--text-primary);
 
     &:hover {
       background-color: #ffdd00;
@@ -220,21 +221,3 @@
   }
 }
 
-// Dark mode background for "buy me a coffee" button
-:root[data-theme='dark'] .drawer .support-link {
-  background-color: #ffdd00;
-
-  &:hover {
-    background-color: #e6c800;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .drawer .support-link {
-    background-color: #ffdd00;
-
-    &:hover {
-      background-color: #e6c800;
-    }
-  }
-}

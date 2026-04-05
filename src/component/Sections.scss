@@ -44,7 +44,7 @@
 
     &.done {
       .done-count {
-        color: $color-green-dark;
+        color: var(--done-count-color);
         font-weight: bold;
       }
     }
