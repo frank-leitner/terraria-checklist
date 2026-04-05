@@ -12,7 +12,12 @@ const ActionBar = (): JSX.Element => {
 
   return (
     <header className="action-bar">
-      <button className="drawer-toggle" onClick={handleDrawerMenuClick} aria-label="Open menu" aria-expanded={openDrawer}></button>
+      <button
+        className="drawer-toggle"
+        onClick={handleDrawerMenuClick}
+        aria-label="Open menu"
+        aria-expanded={openDrawer}
+      ></button>
       <span className="title">🌳 Progression Checklist ☀️</span>
     </header>
   )

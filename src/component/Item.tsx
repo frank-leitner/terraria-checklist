@@ -43,8 +43,8 @@ const Item = ({ item, collectionId }: ItemProps): JSX.Element => {
 
   return (
     <div className={`item ${isChecked ? 'done' : ''}`}>
-      <button 
-        className="frame" 
+      <button
+        className="frame"
         onClick={handleItemClick}
         type="button"
         aria-pressed={isChecked}

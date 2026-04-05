@@ -37,7 +37,11 @@ const Line = ({ pageId, id, text }: LineProps): JSX.Element => {
         checked={isChecked}
         aria-labelledby={textId}
       />
-      <span id={textId} className="text" dangerouslySetInnerHTML={{ __html: markdownToHtml(text) }}></span>
+      <span
+        id={textId}
+        className="text"
+        dangerouslySetInnerHTML={{ __html: markdownToHtml(text) }}
+      ></span>
     </div>
   )
 }

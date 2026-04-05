@@ -128,14 +128,14 @@ $dark-item-done-border: #5a9e60;
 
 // Numeric variables (not colors) can't use light-dark(). Use a media query instead.
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme='light']) {
     --icon-invert: 0.85;
     --cover-brightness: 0.7;
   }
 }
 
 // Manual theme overrides (takes priority over system preference)
-:root[data-theme="light"] {
+:root[data-theme='light'] {
   color-scheme: light;
   --bg-primary: #{$light-bg-primary};
   --bg-secondary: #{$light-bg-secondary};
@@ -159,7 +159,7 @@ $dark-item-done-border: #5a9e60;
   --cover-brightness: 1;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   color-scheme: dark;
   --bg-primary: #{$dark-bg-primary};
   --bg-secondary: #{$dark-bg-secondary};

@@ -120,7 +120,12 @@ const Drawer = (): JSX.Element => {
             {getNextThemeLabel()}
           </button>
           <button className="reset" onClick={handleResetClick} type="button">
-            <img className="action-icon" src="image/icon/arrow_refresh_small.png" alt="" aria-hidden="true" />
+            <img
+              className="action-icon"
+              src="image/icon/arrow_refresh_small.png"
+              alt=""
+              aria-hidden="true"
+            />
             Reset progression
           </button>
         </div>
