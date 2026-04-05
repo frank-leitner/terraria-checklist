@@ -37,6 +37,11 @@
   top: $action-bar-height;
   bottom: 0;
   overflow-y: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   font-size: $small-font-size;
 
