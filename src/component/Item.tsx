@@ -6,6 +6,7 @@ enum CollectionType {
   ARMORS = 1,
   TROPHIES = 2,
   RELICS = 3,
+  VANITY = 4,
 }
 
 type Item = {
@@ -39,6 +40,7 @@ const Item = ({ item, collectionId }: ItemProps): JSX.Element => {
     [CollectionType.ARMORS]: 'armor',
     [CollectionType.TROPHIES]: 'trophy',
     [CollectionType.RELICS]: 'relic',
+    [CollectionType.VANITY]: 'vanity',
   }
 
   return (

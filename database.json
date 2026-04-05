@@ -1005,6 +1005,129 @@
       ]
     },
     {
+      "id": 3,
+      "label": "Relics",
+      "slug": "relics",
+      "background": "#b49e3f",
+      "items": [
+        "🌳 Pre-Hardmode",
+        {
+          "id": 100,
+          "name": "King Slime Relic"
+        },
+        {
+          "id": 101,
+          "name": "Eye of Cthulhu Relic"
+        },
+        {
+          "id": 102,
+          "name": "Eater of Worlds Relic"
+        },
+        {
+          "id": 103,
+          "name": "Brain of Cthulhu Relic"
+        },
+        {
+          "id": 104,
+          "name": "Queen Bee Relic"
+        },
+        {
+          "id": 105,
+          "name": "Skeletron Relic"
+        },
+        {
+          "id": 106,
+          "name": "Deerclops Relic"
+        },
+        {
+          "id": 107,
+          "name": "Wall of Flesh Relic"
+        },
+        "🦄 Hardmode",
+        {
+          "id": 108,
+          "name": "Queen Slime Relic"
+        },
+        {
+          "id": 109,
+          "name": "Twins Relic"
+        },
+        {
+          "id": 110,
+          "name": "Destroyer Relic"
+        },
+        {
+          "id": 111,
+          "name": "Skeletron Prime Relic"
+        },
+        {
+          "id": 112,
+          "name": "Plantera Relic"
+        },
+        {
+          "id": 113,
+          "name": "Golem Relic"
+        },
+        {
+          "id": 114,
+          "name": "Empress of Light Relic"
+        },
+        {
+          "id": 115,
+          "name": "Duke Fishron Relic"
+        },
+        {
+          "id": 116,
+          "name": "Lunatic Cultist Relic"
+        },
+        {
+          "id": 117,
+          "name": "Moon Lord Relic"
+        },
+        "📅 Events",
+        {
+          "id": 118,
+          "name": "Dark Mage Relic"
+        },
+        {
+          "id": 120,
+          "name": "Ogre Relic"
+        },
+        {
+          "id": 121,
+          "name": "Betsy Relic"
+        },
+        {
+          "id": 122,
+          "name": "Mourning Wood Relic"
+        },
+        {
+          "id": 123,
+          "name": "Pumpking Relic"
+        },
+        {
+          "id": 124,
+          "name": "Everscream Relic"
+        },
+        {
+          "id": 125,
+          "name": "Santa-NK1 Relic"
+        },
+        {
+          "id": 126,
+          "name": "Ice Queen Relic"
+        },
+        {
+          "id": 127,
+          "name": "Flying Dutchman Relic"
+        },
+        {
+          "id": 128,
+          "name": "Martian Saucer Relic"
+        }
+      ]
+    },
+    {
       "id": 2,
       "label": "Trophies",
       "slug": "trophies",
@@ -1149,125 +1272,474 @@
       ]
     },
     {
-      "id": 3,
-      "label": "Relics",
-      "slug": "relics",
-      "background": "#b49e3f",
+      "id": 4,
+      "label": "Vanity Sets",
+      "slug": "vanity",
+      "background": "#8a5ca0",
       "items": [
-        "🌳 Pre-Hardmode",
+        "👗 Vanity Sets",
+        {
+          "id": 1,
+          "name": "Familiar set"
+        },
+        {
+          "id": 2,
+          "name": "Archaeologist's set"
+        },
+        {
+          "id": 3,
+          "name": "Hero's set"
+        },
+        {
+          "id": 4,
+          "name": "Tuxedo set"
+        },
+        {
+          "id": 5,
+          "name": "White Tuxedo set"
+        },
+        {
+          "id": 6,
+          "name": "Fallen Tuxedo set"
+        },
+        {
+          "id": 7,
+          "name": "The Doctor's set"
+        },
+        {
+          "id": 8,
+          "name": "Gentleman's set"
+        },
+        {
+          "id": 9,
+          "name": "Plumber's set"
+        },
+        {
+          "id": 10,
+          "name": "Pharaoh's set"
+        },
+        {
+          "id": 11,
+          "name": "Mummy set"
+        },
+        {
+          "id": 12,
+          "name": "Rune set"
+        },
+        {
+          "id": 13,
+          "name": "Ancient set"
+        },
+        {
+          "id": 14,
+          "name": "Bee set"
+        },
+        {
+          "id": 15,
+          "name": "Sailor set"
+        },
+        {
+          "id": 16,
+          "name": "Pirate set"
+        },
+        {
+          "id": 17,
+          "name": "Prince set"
+        },
+        {
+          "id": 18,
+          "name": "Princess set"
+        },
+        {
+          "id": 19,
+          "name": "Buccaneer set"
+        },
+        {
+          "id": 20,
+          "name": "Wedding set"
+        },
+        {
+          "id": 21,
+          "name": "Clown set"
+        },
+        {
+          "id": 22,
+          "name": "Cowboy set"
+        },
+        {
+          "id": 23,
+          "name": "Superhero set"
+        },
+        {
+          "id": 24,
+          "name": "Steampunk set"
+        },
+        {
+          "id": 25,
+          "name": "Fish Costume set"
+        },
+        {
+          "id": 26,
+          "name": "Mermaid set"
+        },
+        {
+          "id": 27,
+          "name": "Mushroom set"
+        },
+        {
+          "id": 28,
+          "name": "Scarecrow set"
+        },
+        {
+          "id": 29,
+          "name": "Elf set"
+        },
+        {
+          "id": 30,
+          "name": "Silly Sunflower set"
+        },
+        {
+          "id": 31,
+          "name": "Pedguin's set"
+        },
+        {
+          "id": 32,
+          "name": "Plaguebringer's set"
+        },
+        {
+          "id": 33,
+          "name": "Lamia set"
+        },
+        {
+          "id": 34,
+          "name": "Floret Protector set"
+        },
+        {
+          "id": 35,
+          "name": "Timeless Traveler's set"
+        },
+        {
+          "id": 36,
+          "name": "TV Head set"
+        },
+        {
+          "id": 37,
+          "name": "Chippy's set"
+        },
+        {
+          "id": 38,
+          "name": "Butcher's set"
+        },
+        {
+          "id": 39,
+          "name": "Dr. Man Fly set"
+        },
+        {
+          "id": 40,
+          "name": "Gravedigger set"
+        },
+        {
+          "id": 41,
+          "name": "Tax Collector's set"
+        },
+        {
+          "id": 42,
+          "name": "Country Club set"
+        },
+        {
+          "id": 43,
+          "name": "Firestarter's set"
+        },
+        {
+          "id": 44,
+          "name": "Dog set"
+        },
+        {
+          "id": 45,
+          "name": "Fox set"
+        },
+        {
+          "id": 46,
+          "name": "Bunny set"
+        },
+        {
+          "id": 47,
+          "name": "Capricorn set"
+        },
+        {
+          "id": 48,
+          "name": "Master Gamer's set"
+        },
+        {
+          "id": 49,
+          "name": "Martian Costume set"
+        },
+        {
+          "id": 50,
+          "name": "Martian Uniform set"
+        },
+        {
+          "id": 51,
+          "name": "Lunar Cultist set"
+        },
+        {
+          "id": 52,
+          "name": "Solar Cultist set"
+        },
+        {
+          "id": 53,
+          "name": "The Beheaded's set"
+        },
+        {
+          "id": 54,
+          "name": "Pal Metal set"
+        },
+        {
+          "id": 55,
+          "name": "Lilac Dusk set"
+        },
+        {
+          "id": 56,
+          "name": "Wandering set"
+        },
+        {
+          "id": 57,
+          "name": "Heroicis' set"
+        },
+        {
+          "id": 58,
+          "name": "Funeral set"
+        },
+        {
+          "id": 59,
+          "name": "Royal set"
+        },
+        {
+          "id": 60,
+          "name": "Star Princess set"
+        },
+        {
+          "id": 61,
+          "name": "Chef set"
+        },
+        {
+          "id": 62,
+          "name": "Maid set"
+        },
+        {
+          "id": 63,
+          "name": "Pink Maid set"
+        },
+        {
+          "id": 64,
+          "name": "Victorian Goth set"
+        },
+        {
+          "id": 65,
+          "name": "Pretty Pink set"
+        },
+        {
+          "id": 66,
+          "name": "Black Graduation set"
+        },
+        {
+          "id": 67,
+          "name": "Blue Graduation set"
+        },
+        {
+          "id": 68,
+          "name": "Maroon Graduation set"
+        },
+        {
+          "id": 69,
+          "name": "Blue Bikini set"
+        },
+        "🎃 Halloween Sets",
+        {
+          "id": 70,
+          "name": "Bride of Frankenstein set"
+        },
+        {
+          "id": 71,
+          "name": "Cat set"
+        },
+        {
+          "id": 72,
+          "name": "Clothier's set"
+        },
+        {
+          "id": 73,
+          "name": "Creeper set"
+        },
+        {
+          "id": 74,
+          "name": "Cyborg set"
+        },
+        {
+          "id": 75,
+          "name": "Dryad set"
+        },
+        {
+          "id": 76,
+          "name": "Dye Trader's set"
+        },
+        {
+          "id": 77,
+          "name": "Ghost set"
+        },
+        {
+          "id": 78,
+          "name": "Karate Tortoise set"
+        },
+        {
+          "id": 79,
+          "name": "Leprechaun set"
+        },
+        {
+          "id": 80,
+          "name": "Nurse set"
+        },
+        {
+          "id": 81,
+          "name": "Pixie set"
+        },
+        {
+          "id": 82,
+          "name": "Pumpkin set"
+        },
+        {
+          "id": 83,
+          "name": "Reaper set"
+        },
+        {
+          "id": 84,
+          "name": "Robot set"
+        },
+        {
+          "id": 85,
+          "name": "Space Creature set"
+        },
+        {
+          "id": 86,
+          "name": "Treasure Hunter set"
+        },
+        {
+          "id": 87,
+          "name": "Unicorn set"
+        },
+        {
+          "id": 88,
+          "name": "Vampire set"
+        },
+        {
+          "id": 89,
+          "name": "Witch set"
+        },
+        {
+          "id": 90,
+          "name": "Wolf set"
+        },
+        "🎄 Christmas Sets",
+        {
+          "id": 91,
+          "name": "Mrs. Claus set"
+        },
+        {
+          "id": 92,
+          "name": "Parka set"
+        },
+        {
+          "id": 93,
+          "name": "Santa set"
+        },
+        {
+          "id": 94,
+          "name": "Tree set"
+        },
+        "🎮 Developer Sets",
+        {
+          "id": 95,
+          "name": "Aaron's set"
+        },
+        {
+          "id": 96,
+          "name": "Arkhalis' set"
+        },
+        {
+          "id": 97,
+          "name": "Cenx's set"
+        },
+        {
+          "id": 98,
+          "name": "Cenx's Dress set"
+        },
+        {
+          "id": 99,
+          "name": "Chicken Bones' set"
+        },
         {
           "id": 100,
-          "name": "King Slime Relic"
+          "name": "Crowno's set"
         },
         {
           "id": 101,
-          "name": "Eye of Cthulhu Relic"
+          "name": "D-Town's set"
         },
         {
           "id": 102,
-          "name": "Eater of Worlds Relic"
+          "name": "FoodBarbarian's set"
         },
         {
           "id": 103,
-          "name": "Brain of Cthulhu Relic"
+          "name": "Ghostar's set"
         },
         {
           "id": 104,
-          "name": "Queen Bee Relic"
+          "name": "Grox The Great's set"
         },
         {
           "id": 105,
-          "name": "Skeletron Relic"
+          "name": "Jim's set"
         },
         {
           "id": 106,
-          "name": "Deerclops Relic"
+          "name": "Kazzymodus' set"
         },
         {
           "id": 107,
-          "name": "Wall of Flesh Relic"
+          "name": "Lazure's set"
         },
-        "🦄 Hardmode",
         {
           "id": 108,
-          "name": "Queen Slime Relic"
+          "name": "Leinfors' set"
         },
         {
           "id": 109,
-          "name": "Twins Relic"
+          "name": "Loki's set"
         },
         {
           "id": 110,
-          "name": "Destroyer Relic"
+          "name": "Luna's set"
         },
         {
           "id": 111,
-          "name": "Skeletron Prime Relic"
+          "name": "Red's set"
         },
         {
           "id": 112,
-          "name": "Plantera Relic"
+          "name": "Safeman's set"
         },
         {
           "id": 113,
-          "name": "Golem Relic"
+          "name": "Skiphs' set"
         },
         {
           "id": 114,
-          "name": "Empress of Light Relic"
+          "name": "Will's set"
         },
         {
           "id": 115,
-          "name": "Duke Fishron Relic"
-        },
-        {
-          "id": 116,
-          "name": "Lunatic Cultist Relic"
-        },
-        {
-          "id": 117,
-          "name": "Moon Lord Relic"
-        },
-        "📅 Events",
-        {
-          "id": 118,
-          "name": "Dark Mage Relic"
-        },
-        {
-          "id": 120,
-          "name": "Ogre Relic"
-        },
-        {
-          "id": 121,
-          "name": "Betsy Relic"
-        },
-        {
-          "id": 122,
-          "name": "Mourning Wood Relic"
-        },
-        {
-          "id": 123,
-          "name": "Pumpking Relic"
-        },
-        {
-          "id": 124,
-          "name": "Everscream Relic"
-        },
-        {
-          "id": 125,
-          "name": "Santa-NK1 Relic"
-        },
-        {
-          "id": 126,
-          "name": "Ice Queen Relic"
-        },
-        {
-          "id": 127,
-          "name": "Flying Dutchman Relic"
-        },
-        {
-          "id": 128,
-          "name": "Martian Saucer Relic"
+          "name": "Yoraiz0r's set"
         }
       ]
     }
