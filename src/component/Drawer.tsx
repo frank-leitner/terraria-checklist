@@ -104,7 +104,7 @@ const Drawer = (): JSX.Element => {
       <div className={`overlay ${openDrawer ? 'show' : ''}`} onClick={handleOverlayClick}></div>
       <nav className={`drawer ${openDrawer ? 'open' : ''}`} aria-label="Main navigation">
         <div className="logo">
-          <img src="image/logo/tree.png" alt=''/>
+          <img src="image/logo/tree.png" alt="" />
           <div className="logo-text">
             <span>Progression</span>
             <span>Checklist</span>
@@ -126,26 +126,48 @@ const Drawer = (): JSX.Element => {
           </button>
         </div>
 
-        <button className="theme-toggle" onClick={cycleTheme} type="button" aria-label={`Theme: ${getThemeLabel()}. Click to change.`}>
+        <button
+          className="theme-toggle"
+          onClick={cycleTheme}
+          type="button"
+          aria-label={`Theme: ${getThemeLabel()}. Click to change.`}
+        >
           <span className="theme-label">Theme</span>
-          <span className="theme-value" aria-hidden="true">{getThemeIcon()} {getThemeLabel()}</span>
+          <span className="theme-value" aria-hidden="true">
+            {getThemeIcon()} {getThemeLabel()}
+          </span>
         </button>
 
-        <a className="support-link" href="https://www.buymeacoffee.com/ewauq" target="_blank" rel="noopener noreferrer">
-          <img src="image/icon/bmc-full-logo.svg" alt="Buy me a coffee!"/>
+        <a
+          className="support-link"
+          href="https://www.buymeacoffee.com/ewauq"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="image/icon/bmc-full-logo.svg" alt="Buy me a coffee!" />
         </a>
 
+        <div className="diminished">Ready for Terraria 1.4.5 and above</div>
         <div className="diminished">
           Updated on {LAST_BUILD_DATE} (
           <a href="https://ewauq.github.io/terraria-checklist/v1">change version</a>)
         </div>
-        <div className="diminished">Ready for Terraria 1.4.4.9</div>
+        <br />
         <div className="diminished">
           Code by{' '}
-          <a href="https://github.com/ewauq/terraria-checklist" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/ewauq/terraria-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ewauq
           </a>{' '}
-          · Artwork by{' '}
+          &{' '}
+          <a href="https://github.com/Clonephaze" target="_blank" rel="noopener noreferrer">
+            Clonephaze
+          </a>{' '}
+          <br />
+          Artwork by{' '}
           <a
             href="https://www.deviantart.com/vsewolod/art/Terraria-World-730563825"
             target="_blank"
