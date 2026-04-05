@@ -177,7 +177,7 @@
         },
         {
           "id": 40,
-          "text": "{npc Party Girl}(Party_Girl): have at least 14 town NPCs"
+          "text": "{npc Party Girl}(Party_Girl): have at least 20 town NPCs"
         },
         "💀 Boss fights",
         {
@@ -1077,7 +1077,6 @@
           "name": "Moon Lord Trophy"
         },
         "📅 Events",
-
         {
           "id": 86,
           "name": "Dark Mage Trophy"
@@ -1177,7 +1176,6 @@
           "name": "Wall of Flesh Relic"
         },
         "🦄 Hardmode",
-
         {
           "id": 108,
           "name": "Queen Slime Relic"
@@ -1251,7 +1249,6 @@
           "id": 126,
           "name": "Ice Queen Relic"
         },
-
         {
           "id": 127,
           "name": "Flying Dutchman Relic"
