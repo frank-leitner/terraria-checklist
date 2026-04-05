@@ -18,7 +18,7 @@ const ActionBar = (): JSX.Element => {
         aria-label="Open menu"
         aria-expanded={openDrawer}
       ></button>
-      <span className="title">🌳 Progression Checklist ☀️</span>
+      <span className="title">Progression Checklist</span>
     </header>
   )
 }

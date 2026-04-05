@@ -33,6 +33,10 @@
 
   z-index: 9;
   padding-bottom: $gap-large;
+  position: fixed;
+  top: $action-bar-height;
+  bottom: 0;
+  overflow-y: auto;
 
   font-size: $small-font-size;
 
@@ -44,6 +48,10 @@
     margin-right: 0;
     font-size: $global-font-size;
     min-width: $drawer-width-desktop;
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    height: 100vh;
     @include opened;
   }
 
